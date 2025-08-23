@@ -1,0 +1,1 @@
+export JAVA_HOME=/home/murali/.jdks/jbr_dcevm-11.0.16
