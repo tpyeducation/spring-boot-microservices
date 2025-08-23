@@ -8,5 +8,5 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/shabbirdwd53/spring-app-config
+          uri: https://github.com/tpyeducation/spring-app-config
           clone-on-start: true

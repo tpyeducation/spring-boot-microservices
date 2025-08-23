@@ -7,9 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.circuitbreaker.resilience4j.Resilience4JCircuitBreakerFactory;
 import org.springframework.cloud.circuitbreaker.resilience4j.Resilience4JConfigBuilder;
 import org.springframework.cloud.client.circuitbreaker.Customizer;
-import org.springframework.cloud.gateway.filter.ratelimit.KeyResolver;
 import org.springframework.context.annotation.Bean;
-import org.springframework.security.core.context.ReactiveSecurityContextHolder;
 
 import java.time.Duration;
 
@@ -21,16 +19,6 @@ public class CloudGatewayApplication {
 	}
 
 
-	/*@Bean
-	KeyResolver userKeySolver() {
-		return exchange -> Mono.just("userKey");
-	}*/
-	@Bean
-	KeyResolver authUserKeyResolver() {
-		return exchange -> ReactiveSecurityContextHolder.getContext()
-				.map(ctx -> ctx.getAuthentication()
-						.getCredentials().toString());
-	}
 
 	@Bean
 	public Customizer<Resilience4JCircuitBreakerFactory> defaultCustomizer() {
