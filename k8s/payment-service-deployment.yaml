@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: payment-service-app
-        image: dailycodebuffer/paymentservice
+        image: pmr27918791/payment-service:MINI_KUBE
         imagePullPolicy: Always
         ports:
         - containerPort: 8081

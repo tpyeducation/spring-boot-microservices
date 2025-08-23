@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: config-server-app
-        image: dailycodebuffer/configserver
+        image: pmr27918791/config-server:MINI_KUBE
         imagePullPolicy: Always
         ports:
         - containerPort: 9296

@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: cloud-gateway-app
-        image: dailycodebuffer/cloudgateway
+        image:  pmr27918791/cloud-gateway:MINI_KUBE
         imagePullPolicy: Always
         ports:
         - containerPort: 9090
